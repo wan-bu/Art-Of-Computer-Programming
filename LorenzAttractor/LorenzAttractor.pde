@@ -6,6 +6,7 @@ float z=0;
 float a=10;
 float b=28;
 float c=8.0/3.0;
+float rot=-PI;
 
 ArrayList<PVector> points = new ArrayList<PVector>();
 PeasyCam cam ;
@@ -21,11 +22,14 @@ void draw() {
   float dx = (a*(y-x))*dt;
   float dy = (x*(b-z)-y)*dt;
   float dz = (x*y-c*z)*dt;
+  rot+=0.01;
   x=x+dx;
   y=y+dy;
   z=z+dz;
   points.add(new PVector(x, y, z));
   translate(0, 0, -80);
+  rotateX(rot);
+  rotateY(rot);
   scale(5);
   stroke(255);
   noFill();
