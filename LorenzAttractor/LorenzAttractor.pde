@@ -45,3 +45,9 @@ void draw() {
   }
   endShape();
 }
+void mousePressed() {
+  cursor(HAND);
+}
+void mouseReleased() {
+  cursor(ARROW);
+}

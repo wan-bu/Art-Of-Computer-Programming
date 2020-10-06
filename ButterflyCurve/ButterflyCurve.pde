@@ -20,7 +20,7 @@ void draw() {
   t+=0.01;
   x = sin(t)*(exp(cos(t))-2*cos(4*t)-pow(sin(t/12), 5));
   y = cos(t)*(exp(cos(t))-2*cos(4*t)-pow(sin(t/12), 5));
-  z = sin(t)*cos(t)*(exp(cos(t))-2*cos(4*t)-pow(sin(t/12), 5))*0;
+  z = sin(t)*cos(t)*(exp(cos(t))-2*cos(4*t)-pow(sin(t/12), 5));
   PVector point = new PVector(x,y,z);
   point.mult(15);
   points.add(point);
@@ -42,4 +42,10 @@ void draw() {
     }
   }
   endShape();
+}
+void mousePressed() {
+  cursor(HAND);
+}
+void mouseReleased() {
+  cursor(ARROW);
 }
